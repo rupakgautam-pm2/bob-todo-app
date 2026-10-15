@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Todo App</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <div class="container">
+      <header class="header">
+        <h1 class="header__title">My Todos</h1>
+        <p class="header__subtitle" id="stats">0 tasks remaining</p>
+      </header>
+
+      <!-- Add todo form -->
+      <form class="add-form" id="add-form">
+        <input
+          class="add-form__input"
+          type="text"
+          id="title-input"
+          placeholder="What needs to be done?"
+          autocomplete="off"
+          maxlength="255"
+        />
+        <input
+          class="add-form__input add-form__input--desc"
+          type="text"
+          id="desc-input"
+          placeholder="Description (optional)"
+          autocomplete="off"
+        />
+        <button class="btn btn--primary add-form__btn" type="submit">Add</button>
+      </form>
+
+      <!-- Filter tabs -->
+      <div class="filters" id="filters">
+        <button class="filters__btn filters__btn--active" data-filter="all">All</button>
+        <button class="filters__btn" data-filter="active">Active</button>
+        <button class="filters__btn" data-filter="completed">Completed</button>
+      </div>
+
+      <!-- Todo list -->
+      <ul class="todo-list" id="todo-list"></ul>
+
+      <!-- Empty state -->
+      <div class="empty-state" id="empty-state" hidden>
+        <p>Nothing here — add a task above!</p>
+      </div>
+    </div>
+
+    <script src="app.js"></script>
+  </body>
+</html>
